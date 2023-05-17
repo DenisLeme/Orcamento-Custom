@@ -1,0 +1,236 @@
+﻿@model ContactViewModel
+
+@{
+    ViewData["Title"] = "Orçamento";
+}
+<h1 class="text-center">@ViewData["Title"]</h1>
+
+ <form class="row g-3 ">
+        
+        <div class="col-md-6">
+            <label for="inputEmail4" class="form-label" asp-for="RazaoSocial">Razão Social</label>
+            <input type="text" class="form-control" id="inputText" asp-for="RazaoSocial">
+        </div>
+        <div class="col-md-6">
+            <label for="inputText" class="form-label" asp-for="NomeSolicitante">Nome do Solicitante</label>
+            <input type="text" class="form-control" id="inputPassword4" asp-for="NomeSolicitante">
+        </div>
+        <div class="col-md-6">
+            <label for="inputAddress" class="form-label" asp-for="Cnpj">CNPJ</label>
+            <input type="text" class="form-control" id="cnpj" asp-for="Cnpj">
+        </div>
+        <div class="col-md-3">
+            <label for="inputState" class="form-label" asp-for="Estado">Estado</label>
+            <select id="inputState" class="form-select" asp-for="Estado">
+                <option selected>Selecione seu estado...</option>
+                <option value="1">São Paulo</option>
+                <option value="2">Rio de Janeiro</option>
+                <option value="3">Bahia</option>
+                <option value="4">Minas Gerais</option>
+                <option value="5">Ceará</option>
+                <option value="6">Amazonas</option>
+                <option value="7">Paraná</option>
+
+            </select>
+        </div>
+        <div class="col-md-3">
+            <label for="inputNumber" class="form-label">Quantidade de funcionario</label>
+            <input type="number" class="row form-control" />
+        </div>
+        <div class="col-md-8">
+            <label for="inputCity" class="form-label">Endereço</label>
+            <input type="text" class="form-control" id="inputCity">
+        </div>
+        
+        <div class="col-md-4" id="distancia">
+            <label for="inputCep" class="form-label" >CEP</label>
+            <input type="tel" class="form-control" id="inputCep" pattern="[0-9]">
+        </div>    
+</div>  
+        <div class="accordion" id="accordionExample">
+            <h1 class="text-center">Veja as Opções de planos</h1>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button " type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Básico
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <strong>Escolhendo o plano Básico você tem a opção de -</strong>                        
+                        </div>
+                    <div class="form-check form-check-inline">
+                        <input type="checkbox" id="exame" name="exame" >
+                        <label class="form-check-label" >Exame Clínico</label>
+                        <div class="form-check form-check-inline">
+                            <input type="checkbox"  id="PCMSO" name="PCMSO" >
+                            <label class="form-check-label" for="scales">PCMSO</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input type="checkbox"  id="PPP" name="PPP" >
+                            <label class="form-check-label" for="scales">PPP</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input type="checkbox"  id="scales" name="scales">
+                            <label class="form-check-label" for="scales">Exame Clínico</label>
+                            <script>
+                                function calculoValor(distancia){
+                                    var valor;
+
+                                    if (distancia >= 0 && distancia <= 150) {
+                                        valor = 0.80;
+                                    } else if (distancia > 150 && distancia <= 500){
+                                        valor = 0.70;
+                                    } else if (distancia > 500){
+                                        valor = 0.60;
+                                    } else{
+                                        console.log("A distancia é inválida.");
+                                        return;
+                                    }
+
+                                    let valorTotal = distancia * valor;
+                                    console.log("O Valor do seu orçamento ficou - R$" + valorTotal.toFixed(2));
+                                    }
+
+                                    let distancia = 50;
+                                    calculoValor(distancia);
+                                
+
+
+
+
+                                var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+                                var limit = 3;
+
+                                checkboxes.forEach(function (checkbox) {
+                                    checkbox.addEventListener('change', function () {
+                                        var checkedCount = document.querySelectorAll('input[type="checkbox"]:checked').length;
+                                        if (checkedCount > limit) {
+                                            this.checked = false;
+                                        }
+                                    });
+                                });
+                            </script>
+                        </div>
+                    </div>
+                </div>
+               
+
+            </div>
+        
+        <div class="d-flex align-items-center">
+    <div class="card" style="width: 18rem; height: 20rem; background: #005B3D; opacity: 0.98; margin-right: 50px;">
+         <h3 class="card-title text-center "><strong>Básico</strong></h3>                
+                <strong class="card-text">Escolhendo o plano básico você tem essa variedade de recursos -</strong>
+        <div class="col-md-3 form-group">
+    <div class="form-check text-nowrap">
+        <input class="form-check-input" type="checkbox" id="checkbox1" value="0">
+        <label class="form-check-label" for="checkbox1">Exame  clínico</label>
+    </div>
+    <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="checkbox2" value="1">
+        <label class="form-check-label" for="checkbox2">PCMSO</label>
+    </div>
+    <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="checkbox3" value="2">
+        <label class="form-check-label" for="checkbox3">PPP</label>
+    </div>
+    <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="checkbox4" value="3">
+        <label class="form-check-label" for="checkbox4">PGR</label>
+    </div>
+    <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="checkbox5" value="4">
+        <label class="form-check-label" for="checkbox5">Gestão</label>
+    </div>
+</div>
+
+        <div class="mt-auto text-center">
+            <button class="submit center">Saiba mais</button>
+            </div>
+    </div>
+
+    <div class="card" style="width: 18rem; height: 20rem; background: #005B3D; opacity: 0.98; margin-right: 50px;">
+          <h3 class="card-title text-center "><strong>Plus</strong></h3>
+                
+                <strong class="card-text">Escolhendo o plano básico você tem essa variedade de recursos -</strong>
+                <li class="text">Exame clínico</li>
+                <li class="text">PCMSO</li>
+                <li class="text">PPP</li>
+                <li class="text">PGR</li>
+                <li class="text">Gestão</li>
+                <div class="mt-auto">
+                <button class="submit center">Saiba mais</button>
+            </div>
+    </div>
+    
+    <div class="card" style="width: 18rem; height: 20rem; background: #005B3D; opacity: 0.98; margin-right: 50px;">
+          <h3 class="card-title text-center "><strong>Premium</strong></h3>
+                
+                <strong class="card-text">Escolhendo o plano básico você tem essa variedade de recursos -</strong>
+                <li class="text">Exame clínico</li>
+                <li class="text">PCMSO</li>
+                <li class="text">PPP</li>
+                <li class="text">PGR</li>
+                <li class="text">Gestão</li>
+                <div class="mt-auto">
+                <button class="submit center">Saiba mais</button>
+            </div>
+    </div>
+
+    <div class="card" style="width: 18rem; height: 20rem; background: #005B3D; opacity: 0.98; margin-right: 50px;">
+          <h3 class="card-title text-center "><strong>Personalizado</strong></h3>
+                
+                <strong class="card-text">Escolhendo o plano básico você tem essa variedade de recursos -</strong>
+                <li class="text">Exame clínico</li>
+                <li class="text">PCMSO</li>
+                <li class="text">PPP</li>
+                <li class="text">PGR</li>
+                <li class="text">Gestão</li>
+                <div class="mt-auto">
+                <button class="submit center">Saiba mais</button>
+            </div>
+    </div>
+</div>
+
+        
+
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Plus
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <strong>Escolhendo o plano Plus você tem a opção de -</strong> 
+                </div>
+                <div class="form-check form-check-inline">
+                    <input type="checkbox" id="PGR" for="scales" />
+                    <label class="form-check-label" for="scales" id=" PGR">PGR</label>
+
+                    <input type="checkbox" id="epi" for="scales"/>
+                    <label class="form-check-inline" for="scales" id="epi">EPI</label>
+
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button " type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Accordion Item #3
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                    </div>
+                </div>
+            </div>
+        </div>      
+        <div class="mb-3">
+            <button class="btn btn-primary" type="submit">Submit form</button>
+        </div>
+</div>
+</div>
+    </form>
