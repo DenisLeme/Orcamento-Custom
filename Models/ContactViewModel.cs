@@ -12,6 +12,7 @@ public class ContactViewModel
     public string Endereco {get; set;}
     public string Plano {get; set;}
     
+    public int Cep { get; set; }
 
    
 }
