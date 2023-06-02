@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ProOcupacional\\Desktop\\programação\\.netmvc\\Orcamento\\Orcamento.csproj",
+      "projectUniqueName": "C:\\Users\\ProOcupacional\\Desktop\\programação\\Orçamento-custom\\Orcamento-Custom\\Orcamento.csproj",
       "projectName": "Orcamento",
-      "projectPath": "C:\\Users\\ProOcupacional\\Desktop\\programação\\.netmvc\\Orcamento\\Orcamento.csproj",
+      "projectPath": "C:\\Users\\ProOcupacional\\Desktop\\programação\\Orçamento-custom\\Orcamento-Custom\\Orcamento.csproj",
       "packagesPath": "C:\\Users\\ProOcupacional\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ProOcupacional\\Desktop\\programação\\.netmvc\\Orcamento\\obj\\",
+      "outputPath": "C:\\Users\\ProOcupacional\\Desktop\\programação\\Orçamento-custom\\Orcamento-Custom\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ProOcupacional\\AppData\\Roaming\\NuGet\\NuGet.Config",
