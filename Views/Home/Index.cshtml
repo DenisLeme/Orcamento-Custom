@@ -2,10 +2,19 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h2 style="background: linear-gradient(90deg, #093A12 0%, #00A859 80%);-webkit-background-clip: text; -webkit-text-fill-color: transparent;">Todos os nossos planos incluem -</h2>
-</div>
-<div class="text-center">
+<div class=" card text-center container card-container" style="background: linear-gradient(90deg, #093A12 0%, #00A859 80%)" >
+    <style>
+        .card-container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+    </style>
+    <h2 style="background: linear-gradient(90deg, #eceeec 0%, #eff0ef 80%);-webkit-background-clip: text; -webkit-text-fill-color: transparent;">Todos os nossos planos incluem -</h2>
+
+<div class="card-text text-center">
+    <ul class="list-unstyled">
     <li>PGR</li> 
     <li>LTCAT ou Declaração de Inesistencia de risco </li> 
     <li>PCMSO</li> 
@@ -18,6 +27,8 @@
     <li>Abertura e acompanhamento de atividades</li>
     <li>Sem limites de acessos</li>
     <li>Gráfico estatíco com perfil de saúde</li> 
+    </ul>
+</div>
 </div>
 
 <div class="text-center ">
@@ -31,13 +42,19 @@
 
 </div>
 <style>
+    .card{
+        width: 53rem;
+        height: 33rem;
+    }
+</style>
+<style>
   ul {
     list-style-type: none;
   }
 </style>
 
-<div class="d-flex align-items-center ">
-    <div class="card shadow-lg p-3 mb-5  rounded" style="width: 85rem; height: 32rem; background: #005B3D; opacity: 0.98; margin-right: 50px; ">
+<div class="d-flex align-items-center " style="margin-top: 3%; ">
+    <div class="card shadow-lg p-3 mb-5  rounded" style="width: 35rem; height: 32rem; background: linear-gradient(90deg, #093A12 0%, #00A859 80%); opacity: 0.98; margin-right: 50px; ">
         <h3 class="card-title text-center text-white"><strong>Fundamental</strong></h3>
         <strong class="card-text text-white">Escolhendo o plano Fundamental você tem essa variedade de recursos -</strong>
 
@@ -87,17 +104,17 @@
         </div>
     </div>
 
-    <div class="card shadow-lg p-3 mb-5  rounded" style="width: 85rem; height: 32rem; background: #005B3D; opacity: 0.98; margin-right: 50px;">
+    <div class="card shadow-lg p-3 mb-5  rounded" style="width: 35rem; height: 32rem;background: linear-gradient(90deg, #093A12 0%, #00A859 80%); opacity: 0.98; margin-right: 50px;">
         <h3 class="card-title text-center text-white"><strong>Plus</strong></h3>
 
-        <strong class="card-text text-white">Escolhendo o plano básico você tem essa variedade de recursos -</strong>
+        <strong class="card-text text-white">Escolhendo o plano plus você tem essa variedade de recursos -</strong>
         <ul class="list-unstyled">
         <li class=" align-items-center d-flex text-white"  for="checkbox1" style="white-space: nowrap;" >
                     PPP - Incluso
                 </li> 
         <li class="text-white">Exame Clinico - Incluso</li>
         <li class="text-white">Ficha de EPI - R$30,00</li>
-        <li class="text-white">Ordem de Serviço por função R$70,00
+        <li class="text-white" style="white-space: nowrap;">Ordem de Serviço por função R$70,00
 </li>
         <li class="text-white">Alvara Bombeiro até 690 m - R$950,00
 </li>
@@ -119,21 +136,39 @@
         </div>
     </div>
 
-    <div class="card" style="width: 62rem; height: 33rem; background: #005B3D; opacity: 0.98; margin-right: 50px;">
-        <h3 class="card-title text-center "><strong>Premium</strong></h3>
+    <div class="card shadow-lg p-3 mb-5  rounded" style="width: 33rem; height: 32rem; background: linear-gradient(90deg, #093A12 0%, #00A859 80%); opacity: 0.98; margin-right: 50px;">
+        <h3 class="card-title text-center text-white"><strong>Premium</strong></h3>
 
-        <strong class="card-text">Escolhendo o plano básico você tem essa variedade de recursos -</strong>
-        <li class="text">Exame clínico</li>
-        <li class="text">PCMSO</li>
-        <li class="text">PPP</li>
-        <li class="text">PGR</li>
-        <li class="text">Gestão</li>
+        <strong class="card-text text-white">Escolhendo o plano premium você tem essa variedade de recursos -</strong>
+        <ul class="list-unstyled">
+        <li class=" align-items-center d-flex text-white"  for="checkbox1" style="white-space: nowrap;" >
+                    PPP - Incluso
+                </li> 
+        <li class="text-white">Exame Clinico - Incluso</li>
+        <li class="text-white">Ficha de EPI - Incluso</li>
+        <li class="text-white" style="white-space: nowrap;">Ordem de Serviço por função R$70,00
+</li>
+        <li class="text-white">Alvara Bombeiro até 750 m - Incluso
+</li>
+<li class="text-white">Treinamento - R$ 800,00
+</li>
+<li class="text-white" style="white-space: nowrap;">Lançar docs aneriores até 2anos - R$250,00
+</li>
+<li class="text-white">Integração com sistema de RH</li>
+<li class="text-white">Tabela de Exames complementares</li>
+<li class="text-white">Sem limie de acessos</li>
+<li class="text-white">Grafico Estatíco com Perfil de Saúde</li>
+        </ul>
+        <div class="text-left  mx-auto" style="width: 100%;">
+            <p class="text-left center fs-1 text-white " style="margin-top: -5%;">R$1200,00</p>
+            <p class="text-left fs-5 text-white" style="margin-top: -10%;">em até 3x sem juros</p>
+            </div>
         <div class="mt-auto text-center">
             <button class="submit center" onclick="window.location.href='/Home/Contact'">Saiba Mais</button>
         </div>
     </div>
 
-    <div class="card" style="width: 62rem; height: 33rem; background: #005B3D; opacity: 0.98; margin-right: 50px;">
+     @* <div class="card" style="width: 53rem; height: 33rem; background: #005B3D; opacity: 0.98; margin-right: 50px;">
         <h3 class="card-title text-center "><strong>Personalizado</strong></h3>
         <div class="">
             <strong class="card-text">Escolhendo o plano básico você tem essa variedade de recursos:</strong>
@@ -150,4 +185,4 @@
             <button class="submit center" onclick="window.location.href='/Home/Contact'">Saiba Mais</button>
         </div>
     </div>
-</div>
+</div>  *@
