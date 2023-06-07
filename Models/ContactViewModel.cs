@@ -1,7 +1,10 @@
+using System.ComponentModel;
+
 namespace Orcamento.Models;
 
 public class ContactViewModel
 {
+    [DisplayName("Nome")]
     public int RazaoSocial {get; set;}
     public string NomeSolicitante {get; set;}
     public int Cnpj { get; set; }

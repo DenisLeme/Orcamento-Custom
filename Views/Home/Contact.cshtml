@@ -3,10 +3,13 @@
 @{
     ViewData["Title"] = "Orçamento";
 }
-<h1 class="text-center">@ViewData["Title"]</h1>
 
- <form class="row g-3 ">
-        
+<div class="d-flex align-items-center justify-content-center vh-80 text-white">
+<div class="card mb-5" style="background: linear-gradient(90deg, #093A12 0%, #00A859 80%); padding: 20px; width: 45rem; height: 34rem; ">
+    <h1 class="text-center">@ViewData["Title"]</h1>
+
+   
+    <form class="row g-3">
         <div class="col-md-6">
             <label for="inputEmail4" class="form-label" asp-for="RazaoSocial">Razão Social</label>
             <input type="text" class="form-control" id="inputText" asp-for="RazaoSocial">
@@ -15,45 +18,63 @@
             <label for="inputText" class="form-label" asp-for="NomeSolicitante">Nome do Solicitante</label>
             <input type="text" class="form-control" id="inputPassword4" asp-for="NomeSolicitante">
         </div>
-       <div class="col-md-6">
-    <label for="inputAddress" class="form-label" asp-for="Cnpj">CNPJ</label>
-    <input type="text" class="form-control" id="cnpj" asp-for="Cnpj" onkeypress="return event.charCode >= 48 && event.charCode <= 57">
-   </div>
-
-        <div class="col-md-3">
-            <label for="inputState" class="form-label" asp-for="Estado">Estado</label>
-            <select id="inputState" class="form-select" asp-for="Estado">
-                <option selected>Selecione seu estado...</option>
-                <option value="1">São Paulo</option>
-                <option value="2">Rio de Janeiro</option>
-                <option value="3">Bahia</option>
-                <option value="4">Minas Gerais</option>
-                <option value="5">Ceará</option>
-                <option value="6">Amazonas</option>
-                <option value="7">Paraná</option>
-
-            </select>
+        <div class="col-md-6">
+            <label for="inputAddress" class="form-label" asp-for="Cnpj">CNPJ</label>
+            <input type="text" class="form-control" id="cnpj" asp-for="Cnpj" onkeypress="return event.charCode >= 48 && event.charCode <= 57">
         </div>
-        <div class="col-md-3">
-            <label for="inputNumber" class="form-label" asp-for="QuantidadeFuncionarios">Quantidade de funcionario</label>
-            <input type="number" class="row form-control" asp-for="QuantidadeFuncionarios"/>
+        <div class="col-md-6">
+    <label for="inputState" class="form-label" asp-for="Estado">Estado</label>
+    <select id="inputState"  class="form-select selectpicker" data-live-search="true" data-size="5" data-max-options="5"  asp-for="Estado">
+        <option value="">Selecione seu estado...</option>
+        <option value="0">Acre</option>
+        <option value="22">Alagoas</option>
+        <option value="23">Espirito Santo</option>
+        <option value="1">São Paulo</option>
+        <option value="2">Rio de Janeiro</option>
+        <option value="3">Bahia</option>
+        <option value="4">Minas Gerais</option>
+        <option value="5">Ceará</option>
+        <option value="6">Amazonas</option>
+        <option value="7">Mato Grosso</option>
+        <option value="8">Goiás</option>
+        <option value="9">Maranhão</option>
+        <option value="10">Mato Grosso do sul</option>
+        <option value="11">Pará</option>
+        <option value="12">Paraíba</option>
+        <option value="13">Pernambuco</option>
+        <option value="14">Piauí</option>
+        <option value="15">Rio Grande do Norte</option>
+        <option value="16">Rio Grande do Sul</option>
+        <option value="17">Rondônia</option>
+        <option value="18">Roraima</option>
+        <option value="19">Santa Catarina</option>
+        <option value="20">Sergipe</option>
+        <option value="21">Tocantins</option>
+    </select>   
+</div>
+
+        <div class="col-md-4">
+            <label for="inputNumber" class="form-label" asp-for="QuantidadeFuncionarios">Quantidade de funcionário</label>
+            <input type="number" class="form-control" asp-for="QuantidadeFuncionarios">
         </div>
-        <div class="col-md-8">
+        <div class="col-md-8" id="distancia">
+            <label for="inputCep" class="form-label" asp-for="Cep">CEP</label>
+            <input type="tel" class="form-control" id="inputCep" pattern="[0-9]" asp-for="Cep">
+        </div>
+        <div class="col-md-12">
             <label for="inputCity" class="form-label" asp-for="Endereco">Endereço</label>
             <input type="text" class="form-control" id="inputCity" asp-for="Endereco">
         </div>
         
-        <div class="col-md-4" id="distancia">
-            <label for="inputCep" class="form-label" asp-for="Cep"  >CEP</label>
-            <input type="tel" class="form-control" id="inputCep" pattern="[0-9]" asp-for="Cep">
-        </div>    
-        <div class="submit center text-center " id="submit-form">
-            <button type="text">Faça o orçamento já</button>
+        <div class="col-12">
+            <div class="text-center mt-3">
+                <button type="submit" class="btn btn-dark" style="">Faça o orçamento já</button>
+            </div>
         </div>
+    </form>
+</div>
+</div>
 
-
-
-</div>  
       @*   <div class="accordion" id="accordionExample">
             <h1 class="text-center">Veja as Opções de planos</h1>
             <div class="accordion-item">
@@ -164,4 +185,4 @@
         </div>
 </div>
 </div> *@
-    </form>
+    

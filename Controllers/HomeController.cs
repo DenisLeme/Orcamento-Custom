@@ -20,4 +20,8 @@ public class HomeController : Controller
     public IActionResult Contact(){
         return View();
     }
+    public IActionResult SendContact(ContactViewModel model){
+        return View("Contact");
+
+    }
 }
