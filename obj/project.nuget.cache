@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "hOUmB8HUVnbomVINJpt4swNQLZWILK9NzTFN1hy83rPgcsnkzWYM6bsn/l/G6B7ZHdla8skwIeltaaThSy+bkw==",
+  "dgSpecHash": "JI2byXOsju8hWaSrX4jXX6oeIxVwgBoHckwNoi4/gvWo1V+qFyo4NsFXIaGcn13IJJ0WtXsWMkjP1rH0Ojuuow==",
   "success": true,
   "projectFilePath": "C:\\Users\\ProOcupacional\\Desktop\\programação\\Orçamento-custom\\Orcamento-Custom\\Orcamento.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\ProOcupacional\\.nuget\\packages\\jquery\\3.7.0\\jquery.3.7.0.nupkg.sha512"
+  ],
   "logs": []
 }
