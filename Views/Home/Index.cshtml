@@ -1,6 +1,19 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿@model ContactViewModel;
+
+<div class="d-flex align-items center justify-content-center vh-80 text-white">
+    <div class=" card mb-5" style="background: linear-gradient(90deg, #093A12 0%, #00A859 80%); padding: 20px; width: 45rem; height: 34rem;">
+        <h1 class="text-center">Formulario de Orçamento</h1>
+
+        <form class="row g-3">
+            <div class="col-md-6">
+                <label for="inputEmail" class="form-label " asp-for="RazaoSocial">Razão Social</label>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+
 
 <div class=" card text-center container card-container" style="background: linear-gradient(90deg, #093A12 0%, #00A859 80%)" >
     <style>
