@@ -219,8 +219,25 @@
 <li class="text-white">Exames manuseio de alimentos - 15%OFF</li>
         </ul>
         <div class="text-left  mx-auto" style="width: 100%;">
-            <p class="text-left center fs-1 text-white " style="margin-top: -5%;">R$1200,00</p>
+            <p class="text-left center fs-1 text-white " style="margin-top: -5%;">Valor : <span id="valorListagem2"></span></p>
             <p class="text-left fs-5 text-white" style="margin-top: -10%;">em até 3x sem juros</p>
+            <script>
+   
+
+    document.getElementById("calculateBtn").addEventListener("click", function() {
+        var quantidadeFuncionarios = parseInt(document.getElementById("QuantidadeFuncionario").value)
+
+    document.getElementById("calculateBtn").addEventListener("click", function() {
+        var quantidadeFuncionarios = parseInt(document.getElementById("QuantidadeFuncionario").value);
+        var valorBase = 1200;
+        var valorListagem = valorBase * quantidadeFuncionarios;
+
+        var valorListagemElement = document.getElementById("valorListagem2");
+        if (valorListagemElement) {
+            valorListagemElement.textContent = "R$" + valorListagem.toFixed(2);}}
+    )
+    });
+</script>
             </div>
         <div class="mt-auto text-center">
   <button class="btn btn-primary btn-m" style="background-color: white; color: black;" onclick="window.location.href='/Home/Contact'">Saiba Mais</button>
@@ -251,8 +268,26 @@
 <li class="text-white">Exames manuseio de alimentos - 20%OFF</li>
         </ul>
         <div class="text-left  mx-auto" style="width: 100%;">
-            <p class="text-left center fs-1 text-white " style="margin-top: -5%;">R$4400,00</p>
+            <p class="text-left center fs-1 text-white text-nowrap" style="margin-top: -5%; ">Valor :<span id="valorListagem1"></span></p>
             <p class="text-left fs-5 text-white" style="margin-top: -10%;">em até 12x sem juros</p>
+
+               <script>
+   
+
+    document.getElementById("calculateBtn").addEventListener("click", function() {
+        var quantidadeFuncionarios = parseInt(document.getElementById("QuantidadeFuncionario").value)
+
+    document.getElementById("calculateBtn").addEventListener("click", function() {
+        var quantidadeFuncionarios = parseInt(document.getElementById("QuantidadeFuncionario").value);
+        var valorBase = 4400;
+        var valorListagem = valorBase * quantidadeFuncionarios;
+
+        var valorListagemElement = document.getElementById("valorListagem1");
+        if (valorListagemElement) {
+            valorListagemElement.textContent = "R$" + valorListagem.toFixed(2);}}
+    )
+    });
+</script>
             </div>
         <div class="mt-auto text-center">
   <button class="btn btn-primary btn-m" style="background-color: white; color: black;" onclick="window.location.href='/Home/Contact'">Saiba Mais</button>

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Denis Leme\\OneDrive\\Área de Trabalho\\Programação\\ORCAMENTO-ATUALIZADO\\orcamento\\Orcamento-Custom\\Orcamento.csproj": {}
+    "C:\\Users\\ProOcupacional\\Desktop\\programação\\Orçamento-custom\\Orcamento-Custom\\Orcamento.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Denis Leme\\OneDrive\\Área de Trabalho\\Programação\\ORCAMENTO-ATUALIZADO\\orcamento\\Orcamento-Custom\\Orcamento.csproj": {
+    "C:\\Users\\ProOcupacional\\Desktop\\programação\\Orçamento-custom\\Orcamento-Custom\\Orcamento.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Denis Leme\\OneDrive\\Área de Trabalho\\Programação\\ORCAMENTO-ATUALIZADO\\orcamento\\Orcamento-Custom\\Orcamento.csproj",
+        "projectUniqueName": "C:\\Users\\ProOcupacional\\Desktop\\programação\\Orçamento-custom\\Orcamento-Custom\\Orcamento.csproj",
         "projectName": "Orcamento",
-        "projectPath": "C:\\Users\\Denis Leme\\OneDrive\\Área de Trabalho\\Programação\\ORCAMENTO-ATUALIZADO\\orcamento\\Orcamento-Custom\\Orcamento.csproj",
-        "packagesPath": "C:\\Users\\Denis Leme\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Denis Leme\\OneDrive\\Área de Trabalho\\Programação\\ORCAMENTO-ATUALIZADO\\orcamento\\Orcamento-Custom\\obj\\",
+        "projectPath": "C:\\Users\\ProOcupacional\\Desktop\\programação\\Orçamento-custom\\Orcamento-Custom\\Orcamento.csproj",
+        "packagesPath": "C:\\Users\\ProOcupacional\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ProOcupacional\\Desktop\\programação\\Orçamento-custom\\Orcamento-Custom\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Denis Leme\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ProOcupacional\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -64,7 +64,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }
