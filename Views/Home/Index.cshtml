@@ -52,16 +52,21 @@
                 <input type="tel" class="form-control" id="inputCep" pattern="[0-9]" asp-for="Cep">
             </div>
             <div class="col-md-4">
-                <label for="inputNumber" class="form-label" asp-for="QuantidadeFuncionarios">Quantidade de Funcionarios</label>
-                <input type="number" class="form-control" asp-for="QuantidadeFuncionarios">
+                <label for="inputNumber" class="form-label" asp-for="QuantidadeFuncionarios" >Quantidade de Funcionarios</label>
+                <input type="number" class="form-control" asp-for="QuantidadeFuncionarios" id="QuantidadeFuncionario">
             </div>
             <div class="col-md-12">
                 <label for="inputCity" class="form-label" asp-for="Endereco">Endereço</label>
                 <input type="text" class="form-control" id="inputCity" asp-for="Endereco">
             </div>
+           <div class="col-md-12 text-center">
+            <button type="button" class="btn btn-dark " id="calculateBtn">Faça o orçamento agora</button>
 
+           </div>
 
         </form>
+
+
     </div>
 </div>
 
@@ -161,10 +166,30 @@
                 </li>
             </ul>
             <div class="text-center mx-auto ">
-            <p class="text-nowrap center fs-1 text-white " style="margin-top: -20%;">R$700,00</p>
+            <p class="text-nowrap center fs-1 text-white " style="margin-top: -20%;">Valor:<span id="valorListagem"></span></p>
             <p class="text-nowrap fs-5 text-white" style="margin-top: -40%;">em até 3x sem juros</p>
+            
+            <script>
+   
+
+    document.getElementById("calculateBtn").addEventListener("click", function() {
+        var quantidadeFuncionarios = parseInt(document.getElementById("QuantidadeFuncionario").value)
+
+    document.getElementById("calculateBtn").addEventListener("click", function() {
+        var quantidadeFuncionarios = parseInt(document.getElementById("QuantidadeFuncionario").value);
+        var valorBase = 700;
+        var valorListagem = valorBase * quantidadeFuncionarios;
+
+        var valorListagemElement = document.getElementById("valorListagem");
+        if (valorListagemElement) {
+            valorListagemElement.textContent = "R$" + valorListagem.toFixed(2);}}
+    )
+    });
+</script>
+
             </div>
         </div>
+   
         <div class="mt-auto text-center">
   <button class="btn btn-primary btn-m" style="background-color: white; color: black;" onclick="window.location.href='/Home/Contact'">Saiba Mais</button>
 </div>
